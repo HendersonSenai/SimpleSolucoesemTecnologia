@@ -1,0 +1,117 @@
+/* PALETA baseada no logotipo */
+:root {
+    --yellow: #f4d41e;
+    --red: #e0433c;
+    --blue: #009fe3;
+    --green: #7ac143;
+    --dark: #111;
+    --light: #f4f4f4;
+    --text: #333;
+    --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: var(--light);
+    font-family: Arial;
+    color: var(--text);
+}
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+header img { height: 55px; }
+nav a { color: white; margin-left: 20px; text-decoration: none; }
+nav a:hover { color: var(--blue); }
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('LOGOTIPO-SEMFUNDO.png') center/contain no-repeat;
+    color: white;
+}
+.hero h1 { font-size: 4rem; }
+.hero p { font-size: 1.4rem; }
+
+.section { padding: 80px 40px; }
+.section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 30px; }
+
+.services, .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+.service-box {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.portfolio-item {
+    background: white;
+    padding: 15px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.portfolio-item img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input, textarea {
+    padding: 15px;
+    border-radius: var(--radius);
+    border: 1px solid #aaa;
+}
+button {
+    padding: 15px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+button:hover { background: var(--red); }
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    padding: 14px 20px;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; }
+    nav { margin-top: 10px; }
+    .hero h1 { font-size: 3rem; }
+}

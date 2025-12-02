@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://simple.rhedmax.com.br/sitemap.xml
